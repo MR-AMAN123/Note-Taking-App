@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes Taking App</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <h2 class="navbar-brand">Keep</h2>   
+      <input type="text" class="search-input" id="search" placeholder="Search">
+      <button type="button" class="nav-button" id="navAddNote">Add Note</button>
+      <h3  style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+         <script> document.write(localStorage.getItem("name")); </script></h3>
+      <button type="button" onclick="logOut()" class="logout" id="logout">Logout</button>
+    </div>
+  </nav>  
+  <div class="container">
+    <div class="add-note-container" id="addNoteContainer">
+      <input type="text" class="input-title" id="title" placeholder="Title">
+      <textarea class="input-desc" id="descp" rows="3" placeholder="Take a note..."></textarea>
+      <button type="button" class="save-button" id="addNote">Save</button>
+    </div>
+
+    <div class="notes" id="notes">
+      <div class="card">
+        <div class="note-content">
+          <h5 class="note-title">Hi</h5>
+          <p class="note-text">There</p>
+          <div class="note-buttons">
+            <button class="icon-button"><img src="delete.png" alt="Delete" class="icon"></button>
+            <button class="icon-button"><img src="pencil.png" alt="Edit" class="icon"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
